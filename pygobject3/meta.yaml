@@ -1,0 +1,38 @@
+# This file created by conda-build 2.0.4
+# meta.yaml template originally from:
+# /work/recipes/condabuilder.r19853, last modified Fri Oct  7 15:00:05 2016
+# ------------------------------------------------
+
+package:
+    name: pygobject3
+    version: 3.24.2
+source:
+    fn: pygobject-3.24.1.tar.xz
+    sha256: a628a95aa0909e13fb08230b1b98fc48adef10b220932f76d62f6821b3fdbffd
+    url: https://download.gnome.org/sources/pygobject/3.24/pygobject-3.24.1.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '3'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - cairo-gobject
+        - pcre
+        - glib
+        - gobject-introspection
+        - libffi
+        - py2cairo
+        - python
+    run:
+        - cairo-gobject
+        - glib
+        - gobject-introspection
+        - libffi
+        - py2cairo
+        - python
+        - gettext
+about:
+    home: http://www.gtk.org/
+    license: LGPL
+    summary: Access to GObject-based libraries in Python.

@@ -1,0 +1,35 @@
+# This file created by conda-build 2.0.3
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.SrEvRN, last modified Thu Oct  6 11:20:41 2016
+# ------------------------------------------------
+
+package:
+    name: pango
+    version: 1.40.6
+source:
+    fn: pango-1.40.6.tar.xz
+    sha256: ca152b7383a1e9f7fd74ae96023dc6770dc5043414793bfe768ff06b6759e573
+    url: https://download.gnome.org/sources/pango/1.40/pango-1.40.6.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '2'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - cairo-gobject
+        - freetype
+        - glib
+        - gobject-introspection
+        - harfbuzz
+        - python
+    run:
+        - cairo-gobject
+        - freetype
+        - glib
+        - gobject-introspection
+        - harfbuzz
+about:
+    home: http://www.gtk.org/
+    license: LGPL
+    summary: a library for laying out and rendering of text, with an emphasis on internationalization.

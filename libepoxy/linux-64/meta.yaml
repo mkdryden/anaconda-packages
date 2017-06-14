@@ -1,0 +1,25 @@
+# This file created by conda-build 2.0.3
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.y3sY5U, last modified Wed Oct  5 12:16:20 2016
+# ------------------------------------------------
+
+package:
+    name: libepoxy
+    version: 1.4.2
+source:
+    fn: libepoxy-1.4.2.tar.xz
+    sha256: bea6fdec3d10939954495da898d872ee836b75c35699074cbf02a64fcb80d5b3
+    url: https://download.gnome.org/sources/libepoxy/1.4/libepoxy-1.4.2.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '5'
+    script_env:
+        - NJOBS
+requirements:
+  build:
+    - system
+
+about:
+    home: https://github.com/anholt/libepoxy
+    license: LGPL
+    summary: Library for handling OpenGL function pointer management

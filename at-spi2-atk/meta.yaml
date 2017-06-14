@@ -1,0 +1,36 @@
+# This file created by conda-build 2.0.4
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.NAeEgU, last modified Fri Oct  7 11:01:45 2016
+# ------------------------------------------------
+
+package:
+    name: at-spi2-atk
+    version: 2.24.1
+source:
+    fn: at-spi2-atk-2.24.1.tar.xz
+    sha256: 60dc90ac4f74b8ffe96a9363c25208a443b381bacecfefea6de549f20ed6957d
+    url: https://download.gnome.org/sources/at-spi2-atk/2.24/at-spi2-atk-2.24.1.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '2'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - at-spi2-core
+        - atk
+        - dbus-client
+        - pcre
+        - glib
+        - gobject-introspection
+        - python
+    run:
+        - at-spi2-core
+        - atk
+        - dbus-client
+        - glib
+        - gobject-introspection
+about:
+    home: http://www.gtk.org/
+    license: LGPL
+    summary: bridge for AT-SPI and ATK accessibility technologies

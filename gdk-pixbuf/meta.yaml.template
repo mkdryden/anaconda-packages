@@ -1,0 +1,41 @@
+# Copyright 2014-2015 Peter Williams and collaborators.
+# This file is licensed under a 3-clause BSD license; see LICENSE.txt.
+
+package:
+  name: gdk-pixbuf
+  version: 2.32.2
+
+source:
+  fn: gdk-pixbuf-2.32.2.tar.xz
+  url: http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.32/gdk-pixbuf-2.32.2.tar.xz
+  sha256: d3ab06fc123b13effed4c27c77cebdfad2173ff20628d82c397b7660ae926145
+
+build:
+  number: 2
+  detect_binary_files_with_prefix: true
+  script_env:
+    - NJOBS
+
+requirements:
+  build:
+    - glib
+    - gobject-introspection
+    - jpeg
+    - libpng
+    - libtiff
+    - modern-xorg-stack
+    - python # needed for g-ir-scanner
+    - zlib
+  run:
+    - glib
+    - gobject-introspection
+    - jpeg
+    - libpng
+    - libtiff
+    - modern-xorg-stack
+    - zlib
+
+about:
+  home: http://www.gtk.org/
+  license: LGPL
+  summary: a low-level library for manipulating image data

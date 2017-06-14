@@ -1,0 +1,37 @@
+# This file created by conda-build 2.0.3
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.y3sY5U, last modified Wed Oct  5 12:16:20 2016
+# ------------------------------------------------
+
+package:
+    name: glib
+    version: 2.52.2
+source:
+    fn: glib-2.52.2.tar.xz
+    patches:
+        - system-data-dirs.patch
+        # - no-cocoa-notification.patch
+        - find-libintl.h.patch
+    sha256: f00e5d9e2a2948b1da25fcba734a6b7a40f556de8bc9f528a53f6569969ac5d0
+    url: https://download.gnome.org/sources/glib/2.52/glib-2.52.2.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '5'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - pcre
+        - gettext
+        - libffi
+        - python
+        - zlib
+    run:
+        - pcre
+        - gettext
+        - libffi
+        - zlib
+about:
+    home: http://www.gtk.org/
+    license: LGPL
+    summary: a low-level portability and utility library

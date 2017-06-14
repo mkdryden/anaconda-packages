@@ -1,0 +1,37 @@
+# This file created by conda-build 2.0.3
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.lhguuJ, last modified Thu Oct  6 10:35:57 2016
+# ------------------------------------------------
+
+package:
+    name: cairo-gobject
+    version: 1.14.8
+source:
+    fn: cairo-1.14.8.tar.xz
+    patches: ''
+    sha256: d1f2d98ae9a4111564f6de4e013d639cf77155baf2556582295a0f00a9bc5e20
+    url: https://cairographics.org/releases/cairo-1.14.8.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '8'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - pcre
+        - freetype
+        - glib
+        - libpng
+        - pixman >=0.34
+        - zlib
+    run:
+        - pcre
+        - freetype
+        - glib
+        - libpng
+        - pixman >=0.34
+        - zlib
+about:
+    home: http://cairographics.org/
+    license: LGPL 2.1 and MPL 1.1
+    summary: GLib GObject bindings for the Cairo graphics library

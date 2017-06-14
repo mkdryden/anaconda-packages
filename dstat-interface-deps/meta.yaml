@@ -1,0 +1,14 @@
+package:
+    name: dstat-interface-deps
+    version: "1.0"
+requirements:
+    run:
+        - gobject-introspection
+        - gtk3
+        - pygobject3
+        - adwaita-icon-theme
+
+about:
+    home: http://microfluidics.utoronto.ca/dstat
+    license: GPLv3
+    summary: Binary dependencies for dstat-interface.

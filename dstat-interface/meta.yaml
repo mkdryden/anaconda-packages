@@ -1,0 +1,27 @@
+package:
+  name: dstat-interface
+  version: "1.4.2"
+
+source:
+  fn: dstat_interface-1.4.2.tar.gz
+  url: https://pypi.python.org/packages/f9/6f/5f741695388c9086b83079bd2d085a9c257e0a6e7fcb81571e12117f8935/dstat_interface-1.4.2.tar.gz
+  md5: 2561923838c9a98b3c50d60c02e0f395
+
+requirements:
+    build:
+        - python
+    run:
+        - python
+        - pyserial >=3.2
+        - seaborn
+        - numpy
+        - scipy
+        - matplotlib
+        - pandas
+        - pyyaml
+        - pyzmq
+        - zmq-plugin
+about:
+    home: http://microfluidics.utoronto.ca/dstat
+    license: GPLv3
+    summary: Interface software for DStat Potentiostat.

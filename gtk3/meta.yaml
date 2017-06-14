@@ -1,0 +1,46 @@
+# This file created by conda-build 2.0.4
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.MSjyFc, last modified Fri Oct  7 11:01:04 2016
+# ------------------------------------------------
+
+package:
+    name: gtk3
+    version: 3.22.15
+source:
+    fn: gtk+-3.22.15.tar.xz
+    patches:
+        - m_pi.patch
+        - no-module-warning.patch
+        - resolution.patch
+    sha256: c8a012c2a99132629ab043f764a2b7cb6388483a015cd15c7a4288bec3590fdb
+    url: https://download.gnome.org/sources/gtk+/3.22/gtk+-3.22.15.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '4'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - libepoxy
+        - pkgconfig
+        - at-spi2-atk
+        - atk
+        - cairo-gobject
+        - gdk-pixbuf
+        - pcre
+        - glib
+        - gobject-introspection
+        - pango
+        - python
+    run:
+        - libepoxy
+        - at-spi2-atk
+        - atk
+        - gdk-pixbuf
+        - glib
+        - gobject-introspection
+        - pango
+about:
+    home: http://www.gtk.org/
+    license: LGPL
+    summary: version 3 of the Gtk+ graphical toolkit

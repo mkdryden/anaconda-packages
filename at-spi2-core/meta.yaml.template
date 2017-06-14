@@ -1,0 +1,37 @@
+# Copyright 2014-2015 Peter Williams and collaborators.
+# This file is licensed under a 3-clause BSD license; see LICENSE.txt.
+
+package:
+  name: at-spi2-core
+  version: "2.18.3"
+
+source:
+  fn: at-spi2-core-2.18.3.tar.xz
+  url: http://ftp.gnome.org/pub/gnome/sources/at-spi2-core/2.18/at-spi2-core-2.18.3.tar.xz
+  sha256: ada26add94155f97d0f601a20cb7a0e3fd3ba1588c3520b7288316494027d629
+  patches:
+    - no-intltool.patch
+
+build:
+  number: 2
+  detect_binary_files_with_prefix: true
+  script_env:
+    - NJOBS
+
+requirements:
+  build:
+    - dbus-client
+    - glib
+    - gobject-introspection
+    - modern-xorg-stack
+    - python
+  run:
+    - dbus-client
+    - glib
+    - gobject-introspection
+    - modern-xorg-stack
+
+about:
+  home: http://www.gtk.org/
+  license: LGPL
+  summary: D-Bus-based implementation of AT-SPI accessibility framework

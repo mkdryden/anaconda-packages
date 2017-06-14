@@ -1,0 +1,31 @@
+package:
+  name: zmq-plugin
+  version: "0.2.post14"
+
+source:
+  fn: zmq-plugin-0.2.post14.zip
+  url: https://pypi.python.org/packages/8d/c6/e95e310b114280253db67e2f7832cb4517af111963c6b848ed8ff0b69956/zmq-plugin-0.2.post14.zip
+  md5: 90c302e5a49d3bf170ad9cc506efbb73
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - arrow >=0.7.0
+    - jsonschema
+    - pandas
+    - pyyaml
+    - pyzmq
+
+about:
+  home: https://pyzmq.readthedocs.org
+  license: GNU Library or Lesser General Public License (LGPL) or BSD License
+  summary: 'Python bindings for 0MQ'
+  license_family: LGPL
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

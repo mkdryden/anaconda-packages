@@ -1,0 +1,32 @@
+# This file created by conda-build 2.0.3
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.4y4b9J, last modified Thu Oct  6 10:52:08 2016
+# ------------------------------------------------
+
+package:
+    name: gobject-introspection
+    version: 1.52.1
+source:
+    fn: gobject-introspection-1.52.1.tar.xz
+    sha256: 2ed0c38d52fe1aa6fc4def0c868fe481cb87b532fc694756b26d6cfab29faff4
+    url: https://download.gnome.org/sources/gobject-introspection/1.52/gobject-introspection-1.52.1.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '2'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - pkgconfig
+        - cairo-gobject
+        - pcre
+        - gettext
+        - glib
+        - libffi
+        - python
+    run:
+        - glib
+        - libffi
+about:
+    home: https://wiki.gnome.org/action/show/Projects/GObjectIntrospection
+    license: LGPL

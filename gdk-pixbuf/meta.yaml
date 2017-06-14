@@ -1,0 +1,40 @@
+# This file created by conda-build 2.0.4
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.PwX75r, last modified Fri Oct  7 11:01:20 2016
+# ------------------------------------------------
+
+package:
+    name: gdk-pixbuf
+    version: 2.36.6
+source:
+    fn: gdk-pixbuf-2.36.6.tar.xz
+    sha256: 455eb90c09ed1b71f95f3ebfe1c904c206727e0eeb34fc94e5aaf944663a820c
+    url: https://download.gnome.org/sources/gdk-pixbuf/2.36/gdk-pixbuf-2.36.6.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '2'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - pcre
+        - glib
+        - gobject-introspection
+        - jpeg
+        - libpng
+        - libtiff
+        # - modern-xorg-stack
+        - python
+        - zlib
+    run:
+        - glib
+        - gobject-introspection
+        - jpeg
+        - libpng
+        - libtiff
+        # - modern-xorg-stack
+        - zlib
+about:
+    home: http://www.gtk.org/
+    license: LGPL
+    summary: a low-level library for manipulating image data

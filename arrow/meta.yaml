@@ -1,0 +1,25 @@
+package:
+  name: arrow
+  version: "0.10.0"
+
+source:
+  git_rev: "0.10.0"
+  git_url: https://github.com/crsmithdev/arrow.git
+
+requirements:
+  build:
+    - python
+    - python-dateutil
+
+  run:
+    - python
+    - python-dateutil
+
+test:
+  imports:
+    - arrow
+
+about:
+  home: https://arrow.readthedocs.io/en/latest/
+  license: Apache 2.0
+  license_file: LICENSE

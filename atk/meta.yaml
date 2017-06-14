@@ -1,0 +1,29 @@
+# This file created by conda-build 2.0.4
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.f2RC0S, last modified Fri Oct  7 11:01:37 2016
+# ------------------------------------------------
+
+package:
+    name: atk
+    version: 2.24.0
+source:
+    fn: atk-2.24.0.tar.xz
+    sha256: bb2daa9a808c73a7a79d2983f333e0ba74be42fc51e3ba1faf2551a636487a49
+    url: https://download.gnome.org/sources/atk/2.24/atk-2.24.0.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '3'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - glib
+        - pcre
+        - gobject-introspection
+        - python
+    run:
+        - glib
+        - gobject-introspection
+about:
+    home: http://www.gtk.org/
+    license: LGPL

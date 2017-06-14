@@ -1,0 +1,26 @@
+# This file created by conda-build 2.0.4
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.zAR5Ro, last modified Fri Oct  7 11:02:13 2016
+# ------------------------------------------------
+
+package:
+    name: adwaita-icon-theme
+    version: '3.24.0'
+source:
+    fn: adwaita-icon-theme-3.24.0.tar.xz
+    sha256: ccf79ff3bd340254737ce4d28b87f0ccee4b3358cd3cd5cd11dc7b42f41b272a
+    url: https://download.gnome.org/sources/adwaita-icon-theme/3.24/adwaita-icon-theme-3.24.0.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '1'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - gtk3
+        - librsvg
+    run: ''
+about:
+    home: http://www.gtk.org/
+    license: LGPL
+    summary: graphics resources for the Adwaita Gtk+ theme

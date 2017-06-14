@@ -1,0 +1,40 @@
+# Copyright 2014-2015 Peter Williams and collaborators.
+# This file is licensed under a 3-clause BSD license; see LICENSE.txt.
+
+package:
+  name: pygobject3
+  version: "3.18.2"
+
+source:
+  fn: pygobject-3.18.2.tar.xz
+  url: http://ftp.gnome.org/pub/GNOME/sources/pygobject/3.18/pygobject-3.18.2.tar.xz
+  sha256: 2a3cad1517916b74e131e6002c3824361aee0671ffb0d55ded119477fc1c2c5f
+
+build:
+  number: 3
+  detect_binary_files_with_prefix: true
+  script_env:
+    - NJOBS
+
+requirements:
+  build:
+    - cairo-gobject
+    - glib
+    - gobject-introspection
+    - libffi32
+    - py2cairo # [py2k]
+    - py3cairo # [py3k]
+    - python
+  run:
+    - cairo-gobject
+    - glib
+    - gobject-introspection
+    - libffi32
+    - py2cairo # [py2k]
+    - py3cairo # [py3k]
+    - python
+
+about:
+  home: http://www.gtk.org/
+  license: LGPL
+  summary: Access to GObject-based libraries in Python.

@@ -1,0 +1,24 @@
+package:
+  name: pyserial
+  version: "3.3"
+
+source:
+  git_rev: v3.3
+  git_url: https://github.com/pyserial/pyserial
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - serial
+
+about:
+  home: https://github.com/pyserial/pyserial
+  license: BSD-3-Clause
+  license_file: LICENSE.txt

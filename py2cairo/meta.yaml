@@ -1,0 +1,33 @@
+# Copyright 2015 Peter Williams and collaborators.
+# This file is licensed under a 3-clause BSD license; see LICENSE.txt.
+
+# This package provides py2cairo for OS X, where it's not available by
+# default.
+
+package:
+  name: py2cairo
+  version: 1.10.0
+
+source:
+  fn: py2cairo-1.10.0.tar.bz2
+  url: https://cairographics.org/releases/py2cairo-1.10.0.tar.bz2
+  md5: 20337132c4ab06c1146ad384d55372c5
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+  script_env:
+    - NJOBS
+
+requirements:
+  build:
+    - cairo-gobject
+    - python <3
+  run:
+    - cairo-gobject
+    - python <3
+
+about:
+  home: http://cairographics.org/pycairo/
+  license: LGPL 2.1, MPL 1.1
+  summary: Python 2.X bindings for the Cairo graphics library

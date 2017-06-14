@@ -1,0 +1,35 @@
+# This file created by conda-build 2.0.4
+# meta.yaml template originally from:
+# /vagrant/recipes/condabuilder.zETDOz, last modified Fri Oct  7 11:01:49 2016
+# ------------------------------------------------
+
+package:
+    name: at-spi2-core
+    version: 2.24.1
+source:
+    fn: at-spi2-core-2.24.1.tar.xz
+    patches:
+        - no-intltool.patch
+    sha256: 1e90d064b937aacfe79a96232ac7e63d28d716e85bd9ff4333f865305a959b5b
+    url: https://download.gnome.org/sources/at-spi2-core/2.24/at-spi2-core-2.24.1.tar.xz
+build:
+    detect_binary_files_with_prefix: 'true'
+    number: '2'
+    script_env:
+        - NJOBS
+requirements:
+    build:
+        - pkgconfig
+        - dbus-client
+        - pcre
+        - glib
+        - gobject-introspection
+        - python
+    run:
+        - dbus-client
+        - glib
+        - gobject-introspection
+about:
+    home: http://www.gtk.org/
+    license: LGPL
+    summary: D-Bus-based implementation of AT-SPI accessibility framework

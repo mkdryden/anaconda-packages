@@ -1,11 +1,11 @@
 package:
   name: dstat-interface
-  version: "1.4.2"
+  version: "1.4.3"
 
 source:
-  fn: dstat_interface-1.4.2.tar.gz
-  url: https://pypi.python.org/packages/f9/6f/5f741695388c9086b83079bd2d085a9c257e0a6e7fcb81571e12117f8935/dstat_interface-1.4.2.tar.gz
-  md5: 2561923838c9a98b3c50d60c02e0f395
+  fn: dstat_interface-1.4.3-1.tar.gz
+  url: https://pypi.python.org/packages/55/c5/4e624e48eb5c0f5ff164c39ae40fbee6555f0b4f8c9401d6c8934d2c0d28/dstat_interface-1.4.3-1.tar.gz
+  md5: 9019563816d4698b5c987ebc129a0cad
 
 requirements:
     build:

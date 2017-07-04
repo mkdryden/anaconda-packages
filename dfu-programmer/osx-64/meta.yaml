@@ -1,0 +1,24 @@
+package:
+  name: dfu-programmer
+  version: '0.7.2'
+
+source:
+  git_rev: 5254ee489f0048c36f1af660f2354a7746b3f8cc
+  git_url: https://github.com/dfu-programmer/dfu-programmer.git
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - automake
+    - gettext
+    - libtool
+    - libusb
+  run:
+    - libusb
+
+about:
+  home: http://dfu-programmer.github.io/
+  license: GPLv2
+  summary: 'dfu-programmer is a Device Firmware Update based USB programmer for Atmel chips with a USB bootloader'
